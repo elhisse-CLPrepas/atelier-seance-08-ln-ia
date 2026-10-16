@@ -1,0 +1,19 @@
+{
+  "name": "atelier-ln-ia-seance-08",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "verify": "node scripts/verify-static.mjs && node --check main.js && node --check lib/quality.js",
+    "test": "node --test tests/quality.test.mjs",
+    "test:browser": "playwright test",
+    "standalone": "node scripts/build-standalone.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "vite": "^6.3.5"
+  }
+}

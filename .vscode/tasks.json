@@ -1,0 +1,7 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "LN-IA — Lancer Vite", "type": "shell", "command": "npm run dev", "group": "build", "problemMatcher": [] },
+    { "label": "LN-IA — Construire", "type": "shell", "command": "npm run build", "group": "build", "problemMatcher": [] }
+  ]
+}
