@@ -88,3 +88,13 @@ Le formateur a explicitement autorisé Git, le commit, le push et Pages. Affiche
 Après cet ajout : aperçu autonome régénéré, contrôle statique réussi, trois tests ciblés réussis et build Vite réussi. Scénarios Playwright : **3 passed (32.5s), code de sortie 0**, comprenant l'affiche séance 05, les exports et le mobile.
 
 Git initialisé sur main ; exception de confiance limitée à ce projet nécessaire pour la différence de propriétaire Windows du dossier et du répertoire .git créé par l'environnement d'exécution. Archives originales, dépendances, build et résultats temporaires restent ignorés. PLAYWRIGHT_BASE_URL permet les mêmes contrôles sur le site distant.
+
+## Publication réelle vérifiée — 16 octobre 2026
+
+- Autorisation explicite du formateur reçue ; Git initialisé sur main, origine configurée et commit applicatif `ddadd17004ef2b7e0ba50646f514d0b132b79dc0` poussé. Contrôle des fichiers indexés : archives, node_modules, dist et résultats temporaires absents ; recherche indicative de clés privées et tokens sans résultat. Contrôle diff sans erreur sur le code actif ; espaces Markdown historiques conservés.
+- GitHub Pages activé avec `build_type=workflow`.
+- [Workflow 38898887930](https://github.com/elhisse-CLPrepas/atelier-seance-08-ln-ia/actions/runs/38898887930) : conclusion success, jobs build et deploy réussis. Installation verrouillée, contrôle statique, tests ciblés et build exécutés sur GitHub. Déploiement terminé à 12:12:44 UTC (13:12:44 Africa/Casablanca).
+- [Site public](https://elhisse-clprepas.github.io/atelier-seance-08-ln-ia/) : réponse HTTP 200, titre LN-IA attendu.
+- Tests Playwright avec PLAYWRIGHT_BASE_URL réglé sur le site public : **3 passed (36.9s), code de sortie 0**. Les deux scénarios ordinateur/mobile ciblent le site distant ; le troisième recontrôle l'aperçu autonome local sans réseau. Sept affiches, navigation, quiz, copies et exports testés. Aucun échec de chargement ni erreur JavaScript pendant le scénario desktop.
+- Documentation actualisée dans un commit séparé, avec marqueur [skip ci] pour éviter un second déploiement identique : seuls des fichiers Markdown changent.
+- Limites restantes : validation pédagogique humaine, lecteur d'écran, Safari/Firefox, appareil mobile physique, plein écran et copie de secours. L'application Landing Pages liée n'a fait l'objet que d'un contrôle HTTP. Aucun service IA n'a été ajouté ; aucune donnée réelle de candidat n'a été publiée.

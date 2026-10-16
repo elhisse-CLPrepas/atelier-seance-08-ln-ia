@@ -1,5 +1,11 @@
 # Publication LN-IA Séance 08 sur GitHub Pages
 
+## État actuel — publication réussie le 16 octobre 2026
+
+[Site public vérifié](https://elhisse-clprepas.github.io/atelier-seance-08-ln-ia/) · [workflow initial réussi](https://github.com/elhisse-CLPrepas/atelier-seance-08-ln-ia/actions/runs/38898887930) · commit applicatif `ddadd17`. Git est initialisé sur main et suit origin/main. Pages utilise GitHub Actions. Tests navigateur distants : 3/3 réussis, avec contrôles ordinateur/mobile et aperçu autonome local.
+
+Les étapes ci-dessous sont conservées comme procédure de référence.
+
 ## 1. Ouvrir VS Code
 
 ```bash
@@ -17,7 +23,7 @@ Le répertoire `dist/` est créé si le build réussit.
 
 ## 2. Dépôt Git
 
-Le dépôt cible existe : https://github.com/elhisse-CLPrepas/atelier-seance-08-ln-ia.git. Contrôle du 16 octobre 2026 : dépôt accessible et sans branche distante ; Pages non configuré (réponse API 404). Aucun dépôt Git n'est initialisé localement à cette date.
+Le dépôt cible existe : https://github.com/elhisse-CLPrepas/atelier-seance-08-ln-ia.git. État initial avant publication : dépôt sans branche et Pages non configuré. Ces étapes ont depuis été réalisées ; consulter le bilan en tête de document.
 
 Après accord explicite du formateur, initialiser et publier le dossier revu :
 
@@ -49,7 +55,7 @@ Effectuer commit et push seulement après accord et inspection des fichiers. Les
 - Grille de contrôle, exemple fictif et téléchargements Markdown.
 - Aucun document personnel accessible.
 - Affichage sur téléphone.
-- Six affiches réparties selon leur contenu, affichées en entier et ouvrables.
+- Sept affiches réparties selon leur contenu, affichées en entier et ouvrables.
 - Lien « Ouvrir l’application LN-IA » vers l'atelier Landing Pages.
 
 ## Contrôles locaux avant publication

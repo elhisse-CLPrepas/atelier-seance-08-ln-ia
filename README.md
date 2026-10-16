@@ -65,15 +65,15 @@ atelier-seance-08-ln-ia/
 
 ## Publication GitHub Pages
 
-Dépôt cible créé par le formateur : [elhisse-CLPrepas/atelier-seance-08-ln-ia](https://github.com/elhisse-CLPrepas/atelier-seance-08-ln-ia). Le 16 octobre 2026, le dépôt est accessible mais vide ; Pages n'est pas encore configuré. Les fichiers locaux n'ont pas été poussés.
+Dépôt : [elhisse-CLPrepas/atelier-seance-08-ln-ia](https://github.com/elhisse-CLPrepas/atelier-seance-08-ln-ia). Publication autorisée et réalisée le 16 octobre 2026 : [ouvrir le site](https://elhisse-clprepas.github.io/atelier-seance-08-ln-ia/). [Workflow initial réussi](https://github.com/elhisse-CLPrepas/atelier-seance-08-ln-ia/actions/runs/38898887930), commit applicatif `ddadd17`. Tests navigateur sur le site public : 3/3 réussis (36,9 s).
 
-1. Créer un dépôt GitHub, p. ex. `atelier-seance-08-ln-ia`.
+1. Le dépôt cible existe déjà ; pour une réutilisation, choisir votre propre dépôt GitHub.
 2. Initialiser et pousser ce dossier. Ne pas pousser de documents personnels ou de données confidentielles.
 3. Dans **Settings > Pages**, choisir **GitHub Actions**.
 4. Le workflow `.github/workflows/deploy-pages.yml` prépare et publie `dist/` après push vers `main`.
 5. Vérifier la page, la navigation et les images à l'URL générée par GitHub.
 
-Le `base: './'` de Vite permet l'hébergement à la racine d'un dépôt de projet GitHub Pages. Le workflow est fourni mais **n'a pas été exécuté sur votre dépôt**.
+Le `base: './'` de Vite permet l'hébergement à la racine d'un dépôt de projet GitHub Pages. Le workflow a été exécuté avec succès sur le dépôt cible le 16 octobre 2026 ; les jobs build et deploy sont réussis.
 
 ## Repères méthodologiques
 

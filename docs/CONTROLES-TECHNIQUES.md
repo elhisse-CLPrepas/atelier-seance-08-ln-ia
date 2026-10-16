@@ -48,3 +48,7 @@ Les sections ci-dessous conservent les déclarations du pack initial. Leur limit
 ## Ajout final séance 05 — 16 octobre 2026
 
 Sept affiches intégrées après ajout de « Bases du prompt » à la méthode. Contrôle statique, trois tests ciblés, régénération autonome et build réussis. Tests navigateur : **3 passed (32.5s), code de sortie 0**. Autorisation explicite reçue pour Git, push et Pages ; résultats de publication à consigner après contrôle distant.
+
+## Déploiement et tests distants réussis — 16 octobre 2026
+
+Site vérifié : [https://elhisse-clprepas.github.io/atelier-seance-08-ln-ia/](https://elhisse-clprepas.github.io/atelier-seance-08-ln-ia/). Commit applicatif `ddadd17` ; [workflow](https://github.com/elhisse-CLPrepas/atelier-seance-08-ln-ia/actions/runs/38898887930) réussi (build et deploy). HTTP 200 et titre attendu. Playwright sur la version publiée : scénarios ordinateur/mobile réussis, aperçu autonome local également réussi ; **3 passed (36.9s), code de sortie 0**. Sept affiches et exports testés. Les réserves de non-publication des sections historiques sont levées. Limites restantes documentées dans JOURNAL-QUALITE.md.
