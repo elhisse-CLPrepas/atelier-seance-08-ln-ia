@@ -98,3 +98,11 @@ Git initialisé sur main ; exception de confiance limitée à ce projet nécessa
 - Tests Playwright avec PLAYWRIGHT_BASE_URL réglé sur le site public : **3 passed (36.9s), code de sortie 0**. Les deux scénarios ordinateur/mobile ciblent le site distant ; le troisième recontrôle l'aperçu autonome local sans réseau. Sept affiches, navigation, quiz, copies et exports testés. Aucun échec de chargement ni erreur JavaScript pendant le scénario desktop.
 - Documentation actualisée dans un commit séparé, avec marqueur [skip ci] pour éviter un second déploiement identique : seuls des fichiers Markdown changent.
 - Limites restantes : validation pédagogique humaine, lecteur d'écran, Safari/Firefox, appareil mobile physique, plein écran et copie de secours. L'application Landing Pages liée n'a fait l'objet que d'un contrôle HTTP. Aucun service IA n'a été ajouté ; aucune donnée réelle de candidat n'a été publiée.
+
+## Livrables et portfolio - 19 octobre 2026
+
+Rubrique visible dans le menu et sur accueil : 12 apercus Markdown, telechargements individuels, exemple Association fictif et modele candidat. Bouton de chargement via le mecanisme existant avec confirmation avant remplacement. Sources du dossier livrables-module-02 ; synchronisation avant build et generation autonome.
+
+Controles effectues : verification statique des 10 vues, syntaxe JavaScript, 3 tests de completude reussis, build Vite reussi, apercu autonome regenere. Les 4 scenarios Playwright ont affiche ok : portfolio/export fidele/protection des saisies/mobile, parcours complet, mobile, autonome hors reseau. Capture mobile portfolio examinee. Aucun appel IA ajoute.
+
+Non verifies : nouveau deploiement public, mobile physique, lecteur ecran, Firefox/Safari. Aucun commit, push ni deploiement effectue. Validation pedagogique humaine a effectuer.

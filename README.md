@@ -5,6 +5,34 @@
 Pilotage : **Prof. Abderrahman EL HISSE**.
 
 Ce projet est un **nouvel atelier Vite / JavaScript natif**, rédigé à partir de deux ZIP fournis et du programme de module. Il vise les formateurs, coachs, cadres, entrepreneurs, étudiants et porteurs de projets.
+## Séance du 19 octobre 2026 — lancement local privilégié
+
+Dans le terminal intégré de VS Code, à la racine du projet :
+
+```powershell
+npm.cmd ci
+npm.cmd run dev -- --host 127.0.0.1 --port 5173 --strictPort
+```
+
+Si les dépendances sont déjà installées, lancer seulement la seconde commande.
+Garder le terminal ouvert pendant la séance.
+
+**[Ouvrir le site local](http://127.0.0.1:5173/)**
+**[Consulter le déroulement de la séance](docs/DEROULEMENT-SEANCE-08.md)**
+
+Le lien local fonctionne après le démarrage du serveur.
+Si le port 5173 est occupé, arrêter l’ancien serveur avant de relancer.
+
+- Présentation : rubrique **Présentation**, puis **Agrandir la projection**.
+- Pratique : rubrique **Atelier V1 → V2** et dossier candidat dans VS Code.
+- Basculer navigateur / VS Code : `Alt + Tab`.
+- Quitter le plein écran : `Échap`.
+
+Conserver le même onglet et exporter les saisies avant de recharger
+la page ou de modifier le code : les formulaires ne sont pas sauvegardés.
+
+Secours : ouvrir `APERCU-AUTONOME-SEANCE-08.html` dans le navigateur,
+ou utiliser le [site publié](https://elhisse-clprepas.github.io/atelier-seance-08-ln-ia/).
 
 ## Démarrer
 
@@ -94,3 +122,9 @@ Application liée : [Atelier Landing Pages LN-IA](https://elhisse-clprepas.githu
 Après une modification du HTML, des styles, du JavaScript ou des images : `npm run standalone` régénère l'aperçu autonome. Si les affiches changent, `python scripts/prepare-posters.py` (Pillow requis) prépare leurs copies WebP avant cette régénération.
 
 Consulter `docs/JOURNAL-QUALITE.md` et `docs/CONTROLES-TECHNIQUES.md` pour les tests et les limites de la reprise.
+
+## Livrables et portfolio du module 02
+
+[Ouvrir le dossier de livrables et son exemple fictif](livrables-module-02/README.md). Exemple Association et modele candidat, avec prompts, V1, grille, corrections, V2 et portfolio. Aucune validation reelle automatique.
+
+La rubrique **Livrables & Portfolio**, accessible dans le menu et sur l’accueil, propose 12 aperçus et téléchargements Markdown. Après modification du dossier, exécuter `node scripts/sync-portfolio.mjs` pour actualiser le site local ; la synchronisation est automatique avant build et génération autonome.

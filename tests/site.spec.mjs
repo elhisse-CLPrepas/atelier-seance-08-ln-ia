@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-const views = ['accueil','presentation','methode','demos','atelier','prompts','cartes','validation','ressources'];
+const views = ['accueil','presentation','methode','demos','atelier','prompts','cartes','portfolio','validation','ressources'];
 const application = 'https://elhisse-clprepas.github.io/Atelier-Landing-Pages-LN-IA/';
 async function go(page, view) { await page.locator(`.nav-btn[data-view="${view}"]`).click(); }
 async function noOverflow(page) {

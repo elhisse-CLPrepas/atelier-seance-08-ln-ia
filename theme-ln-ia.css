@@ -36,3 +36,14 @@ main{padding-top:30px}.view{animation:appear .3s ease-out}
 @media(max-width:1050px){.hero-content{padding:34px 28px}.hero-poster{width:calc(100% - 32px)}.hero h1{font-size:3.1rem}.application-banner{align-items:start;flex-direction:column}}
 @media(max-width:760px){main{padding-top:15px}.hero{display:flex;flex-direction:column;min-height:0}.hero-content{padding:30px 22px;width:100%}.hero h1{font-size:clamp(2.5rem,10vw,3.5rem)}.hero-poster{width:min(78%,330px);margin:8px auto 30px;transform:perspective(1000px) rotateY(-3deg);box-shadow:8px 12px 0 #b9954d22,0 18px 32px #071a3626}.hero-poster figcaption{font-size:.6rem}.hero-actions .btn{width:100%}.poster-grid{grid-template-columns:1fr}.context-poster{grid-template-columns:1fr;gap:24px}.context-poster>.poster-card{max-width:380px;margin:auto}.context-copy{padding:4px}.poster-grid .poster-card{max-width:440px;margin:auto}.validation-poster{align-items:start;gap:18px;padding:18px}.validation-poster>a{width:95px}.validation-poster h3{font-size:1.12rem}.validation-poster p{font-size:.9rem}.application-banner{padding:23px}.application-banner .btn{width:100%}.head-text{min-width:180px}.flash-controls .btn{padding:10px 12px;font-size:.85rem}.statement{padding:18px}}
 @media(prefers-reduced-motion:reduce){.relief-card:after{display:none}.hero-poster,.flash-card.flipped,.poster-card:hover{transform:none}.flash-card{box-shadow:var(--shadow)}}
+
+/* Livrables et portfolio Module 02 */
+.portfolio-nav{border-color:#c5a053;color:#ffe5ae}
+.portfolio-banner{display:flex;align-items:center;gap:26px;justify-content:space-between;background:#f2e7ce;border:2px solid #b98b38;border-radius:14px;padding:26px;margin:24px 0}
+.portfolio-banner h2{font-size:1.65rem;margin:10px 0}.portfolio-banner p{margin-bottom:0}.portfolio-banner .btn{flex:none}
+.portfolio-actions{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}.portfolio-group-title{font-size:1.5rem;color:#173451;margin:38px 0 20px}
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.portfolio-document{min-width:0}.portfolio-document h4{color:#173451;font-size:1.1rem;margin-bottom:12px}.portfolio-path{overflow-wrap:anywhere;font-size:.85rem}
+.portfolio-document details{margin:18px 0}.portfolio-document summary{cursor:pointer;font-weight:750;color:#785317;padding:10px 0}
+.portfolio-document pre{white-space:pre-wrap;overflow-wrap:anywhere;font:.9rem/1.65 "Segoe UI",sans-serif;background:#f4f6f9;border:1px solid #d8dfe6;border-radius:8px;padding:16px;color:#173451}
+@media(max-width:760px){.portfolio-banner{flex-direction:column;align-items:stretch;padding:20px}.portfolio-grid{grid-template-columns:1fr}.portfolio-actions .btn{width:100%}}

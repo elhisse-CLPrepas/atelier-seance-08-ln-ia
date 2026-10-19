@@ -6,7 +6,7 @@ const html = get('index.html');
 const js = get('main.js');
 const css = get('src.css');
 const theme = get('theme-ln-ia.css');
-const requiredViews = ['accueil','presentation','methode','demos','atelier','prompts','cartes','validation','ressources'];
+const requiredViews = ['accueil','presentation','methode','demos','atelier','prompts','cartes','portfolio','validation','ressources'];
 for (const view of requiredViews) {
   if (!html.includes(`id="view-${view}"`)) throw Error('Vue manquante : '+view);
 }

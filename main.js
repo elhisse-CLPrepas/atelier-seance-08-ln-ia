@@ -102,3 +102,93 @@ let cardIndex=0,flipped=false;function renderCard(){const [q,a]=cards[cardIndex]
 function renderQuiz(){const root=$('#quizRoot');root.replaceChildren();quiz.forEach((item,i)=>{const holder=document.createElement('div');holder.className='quiz-question';const prompt=document.createElement('p');prompt.textContent=`${i+1}. ${item.q}`;holder.append(prompt);item.opts.forEach((opt,j)=>{const label=document.createElement('label');const radio=document.createElement('input');radio.type='radio';radio.name='quiz-'+i;radio.value=String(j);radio.onchange=gradeQuiz;label.append(radio,document.createTextNode(opt));holder.append(label)});root.append(holder)});$('#quizResult').textContent='Sélectionnez une réponse par question.'}function gradeQuiz(){const vals=quiz.map((_,i)=>$(`input[name="quiz-${i}"]:checked`)?.value);const complete=vals.every(v=>v!==undefined);if(!complete){$('#quizResult').textContent=`${vals.filter(v=>v!==undefined).length}/${quiz.length} réponses renseignées.`;return}const score=vals.filter((v,i)=>Number(v)===quiz[i].good).length;$('#quizResult').textContent=`Résultat : ${score}/${quiz.length}. ${score===quiz.length?'Toutes les réponses sont correctes.':'Relisez les cartes puis recommencez.'} Auto-évaluation uniquement.`}$('#quizReset').onclick=renderQuiz;renderQuiz();
 $('#validationCriteria').innerHTML=controlCriteria.map(([t,d],i)=>`<div class="validation-item"><b>${i+1}. ${t}</b><span>${d}</span></div>`).join('');const checklist=['Je peux expliquer le besoin et le public cible.','Mon prompt structuré et mon prompt maître existent.','La V1 est conservée sans réécriture.','La grille des huit critères est remplie.','Les faits importants ont été vérifiés ou signalés.','Les données sensibles sont protégées.','Les corrections humaines sont justifiées.','La V2 a été relue par moi-même.','La présentation de 3 à 5 minutes est prête.','Deux questions de feedback sont préparées.','La preuve de travail est classée dans le portfolio.'];const checkRoot=$('#checklistRoot');checklist.forEach((item,i)=>{const label=document.createElement('label');label.className='check-item';const input=document.createElement('input');input.type='checkbox';input.dataset.check=i;const span=document.createElement('span');span.textContent=item;label.append(input,span);checkRoot.append(label)});$('#downloadChecklist').onclick=()=>download('checklist-validation-seance-08.md','# Checklist de validation — LN-IA Séance 08\n\n'+checklist.map((line,i)=>`- [${$(`[data-check="${i}"]`).checked?'x':' '}] ${line}`).join('\n')+'\n\nDécision finale : à renseigner par une personne responsable.\n');
 updateStatus();
+
+const portfolioFiles = [
+  {
+    "label": "Exemple fictif · Association",
+    "documents": [
+      {
+        "name": "cadrage-et-prompt.md",
+        "sub": "02-prompts",
+        "text": "# Cadrage et prompt — EXEMPLE FICTIF\nBesoin : créer une fiche d'accueil pour de nouveaux bénévoles.\nPublic : nouveaux bénévoles. Format : fiche pratique.\nPrompt initial reconstitué, non exécuté :\n> Propose une fiche d'accueil : formation, référent, règles d'accès.\nPrompt de contrôle proposé, non exécuté :\n> Contrôle les huit critères LN-IA, signale les informations non sourcées, justifie les corrections et propose une V2 provisoire. La validation reste humaine.\nLes prompts personnels des séances 05–07 ne sont pas fournis.\n"
+      },
+      {
+        "name": "grille-controle-reponses-ia.md",
+        "sub": "02-prompts",
+        "text": "# Grille — EXEMPLE FICTIF\nAucune source interne réelle consultée.\n\n| Critère | Statut proposé | Constat |\n|---|---|---|\n| Fidélité | À corriger | Mission et référent absents |\n| Clarté | Conforme pour la formulation seule | Compréhensible ; exactitude non garantie |\n| Exactitude | Non vérifié | Durée et obligation sans source |\n| Public | À corriger | Contacts et consignes manquants |\n| Format | À corriger | Structurer une fiche |\n| Confidentialité | À corriger | Accès général non justifié |\n| Utilité | À corriger | Informations pratiques manquantes |\n| Limites | À corriger | Incertitudes non signalées |\n"
+      },
+      {
+        "name": "journal-corrections-humaines.md",
+        "sub": "02-prompts",
+        "text": "# Corrections — EXEMPLE FICTIF\n19 octobre 2026. Décisions pédagogiques simulées ; aucun responsable réel de validation.\n\n| V1 | Correction | Justification |\n|---|---|---|\n| Deux heures obligatoires | Renvoyer aux modalités du coordinateur | Durée et obligation non établies |\n| Accès complet aux données | Supprimer cette autorisation générale | Confidentialité et droits non établis |\n| Accueil incomplet | Ajouter mission, référent et règles | Structure plus utile |\n\nSource : démonstration du site uniquement. Consulter les règles réelles de formation et d'habilitation. Supprimer une affirmation non sourcée ne vaut pas vérification.\n"
+      },
+      {
+        "name": "reponse-ia-corrigee-v2.md",
+        "sub": "02-prompts",
+        "text": "# V2 — EXEMPLE FICTIF PROVISOIRE\nTexte du cas Association :\n\nLa fiche présente la mission de l’association, le référent à contacter, les règles d’accueil et les consignes de confidentialité. Les modalités de formation sont communiquées par le coordinateur.\n\nCette structure reste à compléter avec la mission, le référent et les règles autorisées. Confirmer le rôle du coordinateur et les modalités. Non diffusable en l'état.\nStatut proposé : À COMPLÉTER. Validation réelle non effectuée.\n"
+      },
+      {
+        "name": "reponse-ia-v1.md",
+        "sub": "02-prompts",
+        "text": "# V1 — EXEMPLE FICTIF\nTexte préécrit dans le cas Association du site, sans appel IA réel :\n\nChaque bénévole suit obligatoirement deux heures de formation. Il reçoit un accès complet à toutes les données des bénéficiaires.\n\nConserver cette version sans modification.\n"
+      },
+      {
+        "name": "preuves-module-02.md",
+        "sub": "07-portfolio",
+        "text": "# Portfolio Module 02 — EXEMPLE FICTIF ASSOCIATION\nLN-IA · Pilotage : Prof. Abderrahman EL HISSE.\nAucune personne ni association réelle ; aucune validation acquise.\n\n## Index des preuves\n- [cadrage-et-prompt.md](../02-prompts/cadrage-et-prompt.md)\n- [reponse-ia-v1.md](../02-prompts/reponse-ia-v1.md)\n- [grille-controle-reponses-ia.md](../02-prompts/grille-controle-reponses-ia.md)\n- [journal-corrections-humaines.md](../02-prompts/journal-corrections-humaines.md)\n- [reponse-ia-corrigee-v2.md](../02-prompts/reponse-ia-corrigee-v2.md)\n\n## Progression\nSéances 05–07 : productions personnelles non fournies ; prompt reconstitué.\nSéance 08 : comparaison V1/V2 et contrôles illustrés, sans vérification externe.\n\n## Oral de 3 à 5 minutes\nExposer besoin, V1, contrôles, corrections, V2 et limites.\nQuestions de feedback :\n1. Quelles informations manquent pour accueillir un bénévole ?\n2. Quelles preuves demander avant diffusion ?\n\nFeedback réel : non recueilli.\nDécision humaine réelle, responsable et date : non renseignés.\nStatut pédagogique proposé : À COMPLÉTER.\nProchaine action : obtenir les règles autorisées, compléter et faire relire.\n\nProvenance : démonstration Association de main.js. Le code atteste l'origine du cas, pas des règles d'une association.\n"
+      }
+    ]
+  },
+  {
+    "label": "Modèle candidat · À compléter",
+    "documents": [
+      {
+        "name": "cadrage-et-prompt.md",
+        "sub": "02-prompts",
+        "text": "# cadrage-et-prompt\n\nMODÈLE À COMPLÉTER — aucune vérification effectuée.\n\n[À renseigner : besoin, public, format, prompts séances 05–08]\n"
+      },
+      {
+        "name": "grille-controle-reponses-ia.md",
+        "sub": "02-prompts",
+        "text": "# grille-controle-reponses-ia\n\nMODÈLE À COMPLÉTER — aucune vérification effectuée.\n\n[À renseigner : huit critères, statut Conforme / À corriger / Non vérifié et justification]\n"
+      },
+      {
+        "name": "journal-corrections-humaines.md",
+        "sub": "02-prompts",
+        "text": "# journal-corrections-humaines\n\nMODÈLE À COMPLÉTER — aucune vérification effectuée.\n\n[À renseigner : passage V1, correction V2, justification, sources réellement consultées et date]\n"
+      },
+      {
+        "name": "reponse-ia-corrigee-v2.md",
+        "sub": "02-prompts",
+        "text": "# reponse-ia-corrigee-v2\n\nMODÈLE À COMPLÉTER — aucune vérification effectuée.\n\n[À renseigner : V2 relue, limites et décision humaine]\n"
+      },
+      {
+        "name": "reponse-ia-v1.md",
+        "sub": "02-prompts",
+        "text": "# reponse-ia-v1\n\nMODÈLE À COMPLÉTER — aucune vérification effectuée.\n\n[À renseigner : réponse réelle initiale sans modification]\n"
+      },
+      {
+        "name": "preuves-module-02.md",
+        "sub": "07-portfolio",
+        "text": "# Portfolio Module 02 — MODÈLE À COMPLÉTER\nLN-IA · Pilotage : Prof. Abderrahman EL HISSE.\nAucune production ni validation effectuée.\n## Index\n- [cadrage-et-prompt.md](../02-prompts/cadrage-et-prompt.md)\n- [reponse-ia-v1.md](../02-prompts/reponse-ia-v1.md)\n- [grille-controle-reponses-ia.md](../02-prompts/grille-controle-reponses-ia.md)\n- [journal-corrections-humaines.md](../02-prompts/journal-corrections-humaines.md)\n- [reponse-ia-corrigee-v2.md](../02-prompts/reponse-ia-corrigee-v2.md)\n## Bilan\n- Preuves personnelles séances 05–07 : [à joindre]\n- Sources consultées et dates : [à compléter]\n- Corrections et apprentissages : [à compléter]\n- Limites : [à compléter]\n- Deux questions et feedback recueilli : [à compléter]\n- Décision humaine, responsable et date : non effectuée\n- Prochaine action : [à compléter]\n"
+      }
+    ]
+  }
+];
+
+const portfolioRoot = $('#portfolioDocuments');
+for (const group of portfolioFiles) {
+ const heading=document.createElement('h3'); heading.textContent=group.label; heading.className='portfolio-group-title';
+ const grid=document.createElement('div'); grid.className='portfolio-grid';
+ for(const doc of group.documents){
+  const card=document.createElement('article');card.className='soft-panel portfolio-document';
+  const title=document.createElement('h4');title.textContent=doc.name==='preuves-module-02.md'?'Portfolio et preuves du module 02':doc.name.replace('.md','').replaceAll('-',' ');
+  const location=document.createElement('p');location.className='portfolio-path';location.textContent=doc.sub+'/'+doc.name;
+  const details=document.createElement('details');const summary=document.createElement('summary');summary.textContent='Lire l’aperçu du document';
+  const pre=document.createElement('pre');pre.textContent=doc.text;details.append(summary,pre);
+  const btn=document.createElement('button');btn.type='button';btn.className='btn btn-outline';btn.textContent='↓ Télécharger .md';btn.onclick=()=>download(doc.name,doc.text);
+  card.append(title,location,details,btn);grid.append(card);
+ }
+ portfolioRoot.append(heading,grid);
+}
+$('#portfolioLoad').onclick=()=>{go('atelier');$('#loadDemo').click();};

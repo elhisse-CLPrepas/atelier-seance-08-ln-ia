@@ -10,7 +10,9 @@
     "verify": "node scripts/verify-static.mjs && node --check main.js && node --check lib/quality.js",
     "test": "node --test tests/quality.test.mjs",
     "test:browser": "playwright test",
-    "standalone": "node scripts/build-standalone.mjs"
+    "standalone": "node scripts/build-standalone.mjs",
+    "prebuild": "node scripts/sync-portfolio.mjs",
+    "prestandalone": "node scripts/sync-portfolio.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.64.1",
