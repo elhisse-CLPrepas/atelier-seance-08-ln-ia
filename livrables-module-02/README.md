@@ -7,4 +7,4 @@ Pilotage : Prof. Abderrahman EL HISSE.
 
 L'exemple reprend le cas Association du site. Tout est fictif, sans génération IA réelle ni validation acquise. Copier le modèle dans un espace personnel ; ne pas committer de données personnelles.
 
-Dans le site : Démonstrations > Association. Pour pratiquer dans Atelier, copier V1 puis V2 depuis les fichiers. Les exports doivent être déplacés manuellement dans le dossier choisi. Aucun chargement ou enregistrement automatique ; exporter avant de recharger la page.
+Dans le site : Démonstrations > Association. Dans Livrables & Portfolio, consulter les apercus et utiliser le bouton Pratiquer avec le cas Association pour charger la demonstration dans Atelier. Confirmer le remplacement uniquement si les saisies actuelles peuvent etre effacees. Les exports doivent être déplacés manuellement dans le dossier choisi. Aucun chargement ou enregistrement automatique ; exporter avant de recharger la page.
