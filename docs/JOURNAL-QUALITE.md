@@ -106,3 +106,7 @@ Rubrique visible dans le menu et sur accueil : 12 apercus Markdown, telechargeme
 Controles effectues : verification statique des 10 vues, syntaxe JavaScript, 3 tests de completude reussis, build Vite reussi, apercu autonome regenere. Les 4 scenarios Playwright ont affiche ok : portfolio/export fidele/protection des saisies/mobile, parcours complet, mobile, autonome hors reseau. Capture mobile portfolio examinee. Aucun appel IA ajoute.
 
 Non verifies : nouveau deploiement public, mobile physique, lecteur ecran, Firefox/Safari. Aucun commit, push ni deploiement effectue. Validation pedagogique humaine a effectuer.
+
+## Publication du portfolio - 19 octobre 2026
+
+Autorisation explicite de commit, push et deploiement recue. Commit applicatif : 99fa3e648ac8e5ccb61dce32a52b0db8cfa649f4, pousse sur origin/main. Workflow Pages 39300108492 : build et deploiement reussis. URL : https://elhisse-clprepas.github.io/atelier-seance-08-ln-ia/ . Test Playwright portfolio sur le site public : scenario ok (13,4 s), apercus, export fidele, protection des saisies et rendu mobile. Limites : appareils physiques, lecteur ecran et navigateurs autres que Chrome non verifies.
